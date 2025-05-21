@@ -17,5 +17,12 @@ checkBoxList.forEach((checkbox)=>{
         else{
         progressBar.classList.add('show-error');
         }
+    });
+});
+
+
+goalInput.forEach((input)=>{
+    input.addEventListener('focus',()=>{
+        progressBar.classList .remove('show-error');
     })
 })
