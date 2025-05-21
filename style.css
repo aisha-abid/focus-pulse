@@ -171,4 +171,16 @@ footer{
     font-size: 13px;
    
 }
+.completed .custom-checkbox{
+    background-color: #47a200;
+    border-color: #47a200;
+}
+.completed .check-in{
+   display: block;
+}
+.completed .goal-input{
+     color: #47a200;
+    text-decoration-line: line-through;
+}
+
 
