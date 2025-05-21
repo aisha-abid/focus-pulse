@@ -140,3 +140,19 @@ main{
 .goal-input::placeholder{
     color: rgb(155,137,104);
 }
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+  background-color:  #47a200; /* Green */
+  border: none;
+  border-radius: 26px;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
