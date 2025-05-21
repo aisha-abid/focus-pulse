@@ -4,10 +4,12 @@
 body{
     background-color: #f2f9ed;
     font-family: 'Poppins',sans-serif;
+      
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    
 }
 main{
     padding: 20px 30px;
@@ -17,7 +19,7 @@ main{
     font-size: 50px;
     text-align: center;
 }
-.title-span{
+.title span{
     color: #61481c ;
 }
 .card{
@@ -68,4 +70,42 @@ main{
      100%{
             transform: translate(-50%, -50%) rotate(-360deg);
         }
+}
+.progress-label{
+    font-size: 14px;
+    color: #858585;
+    font-weight: 400;
+}
+.progress-bar{
+    height: 30px;
+    background-color: rgba(72, 163, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.progress-value{
+    height:100%;
+    border-radius: 15px;
+    background-color: #47a200;
+    width: 0;
+    font-size: 10px;
+    font-weight: 500;
+    color: #eeffe0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.3 ease-in-out;
+}
+.progress-value span{
+    padding-left: 20px;
+    min-width: max-content;
+}
+.error-label{
+    color: #ff5151;
+    margin-top: 0px;
+    display: none ;
+    font-weight: 400;
+    font-size: 14px;
+}
+.show-error .error-label{
+    display: block;
 }
