@@ -33,17 +33,22 @@ main{
 .sub-title{
     display: flex;
     align-items: center;
+    gap:15px;
 }
 .sun-wrapper{
     position: relative;
     width: 50px;
     height: 50px;
     animation: rotateSun 5s linear infinite;
+     pointer-events: none;
+    user-select: none; 
 }
 .sun{
     width: 100%;
     height: 100%;
     display: block;
+     /* pointer-events: none;
+    user-select: none;  */
 }
 .smile{
     position: absolute;
@@ -52,7 +57,8 @@ main{
     width: 13px;
     height: 13px;
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    /* pointer-events: none;
+    user-select: none;  */
     animation: counterRotate 5s linear infinite;
 }
 @keyframes rotateSun{
@@ -155,17 +161,18 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 footer{
     display: flex;
     flex-direction: column;
+    margin-block: 5px;
 }
 .quote, .made-by{
     text-align: center;
     font-size: 15px;
     font-weight: 400;
-    margin-block: 5px;
+    
 }
 .made-by{
     font-size: 13px;
@@ -182,5 +189,21 @@ footer{
      color: #47a200;
     text-decoration-line: line-through;
 }
-
+/* Mobile Design */
+@media (max-width:600px){
+    .title{
+        font-size: 32px;
+    }
+    .card{
+        padding: 16px 24px;
+    }
+    .goal{
+        height: 54px;
+        margin-bottom: 24px;
+    }
+    .custom-checkbox{
+        height: 20px;
+        width: 20px;
+    }
+}
 

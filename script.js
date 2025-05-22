@@ -3,7 +3,7 @@ const goalInput=document.querySelectorAll('.goal-input');
 const progressBar=document.querySelector('.progress-bar');
 const progressValue=document.querySelector('.progress-value');
 const progressLabel=document.querySelector('.progress-label');
-
+const resetBtn = document.querySelector(".reset-goals");
 
 const allQuotes=[
     'Raise the bar by completing your goals!',
@@ -77,3 +77,7 @@ goalInput.forEach((input)=>{
     })
 
 })
+ resetBtn.addEventListener("click", () => {
+  localStorage.removeItem("allGoals");
+  location.reload();
+});
