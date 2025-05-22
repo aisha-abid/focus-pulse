@@ -205,5 +205,8 @@ footer{
         height: 20px;
         width: 20px;
     }
+    .button button{
+        padding: 15px 25px; 
+    }
 }
 
