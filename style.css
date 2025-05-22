@@ -93,7 +93,7 @@ main{
     display: flex;
     align-items: center;
     overflow: hidden;
-    transition: width 0.3 ease-in-out;
+    transition: width 1.5 ease-in-out;
 }
 .progress-value span{
     padding-left: 20px;
