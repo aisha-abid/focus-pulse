@@ -2,13 +2,24 @@ const checkBoxList=document.querySelectorAll('.custom-checkbox');
 const goalInput=document.querySelectorAll('.goal-input');
 const progressBar=document.querySelector('.progress-bar');
 const progressValue=document.querySelector('.progress-value');
+const progressLabel=document.querySelector('.progress-label');
 
+
+const allQuotes=[
+    'Raise the bar by completing your goals!',
+    'Well begun is half done!',
+    'Just a step away, keep going!',
+    'Whoa! You just completed all the goals, time for chill '
+]
      
 
 const allGoals=JSON.parse(localStorage.getItem('allGoals')) || {}
 let completedGoalsCount=Object.values(allGoals).filter((goal)=> goal.completed).length;
 progressValue.style.width=`${completedGoalsCount / goalInput.length*100}%`;
 progressValue.firstElementChild.innerText=`${completedGoalsCount}/${goalInput.length} completed`;
+progressLabel.innerText=allQuotes[completedGoalsCount];
+
+
 
 
 checkBoxList.forEach((checkbox)=>{
@@ -24,7 +35,7 @@ checkBoxList.forEach((checkbox)=>{
             completedGoalsCount=Object.values(allGoals).filter((goal)=> goal.completed).length;
             progressValue.style.width=`${(completedGoalsCount / goalInput.length)*100}%`;
             progressValue.firstElementChild.innerText=`${completedGoalsCount}/${goalInput.length} completed`;
-
+            progressLabel.innerText=allQuotes[completedGoalsCount];
             localStorage.setItem('allGoals', JSON.stringify(allGoals));
 
         }
